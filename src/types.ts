@@ -4,12 +4,12 @@ export enum Colors {
 }
 
 export enum Figures {
-    BISGHOP = "bishop",
-    KING = "king",
-    KNIGHT = "knight",
-    PAWN = "pawn",
-    QUEEN = "queen",
-    ROOK = "rook",
+    BISHOP = 'bishop',
+    KING = 'king',
+    KNIGHT = 'knight',
+    PAWN = 'pawn',
+    QUEEN = 'queen',
+    ROOK = 'rook',
 }
 
 export const BoardLettersByNumber: {[key: number]: string} = {
@@ -35,8 +35,8 @@ export const BoardNumbersByLetter: {[key: string]: number} = {
 }
 
 export interface FigureData {
-    int: string,
-    name: FigureData,
+    id: string,
+    name: Figures,
     x: number,
     y: number,
     color: Colors
