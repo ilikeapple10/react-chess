@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b72b0a-65b1-42cf-8c1c-d46b9fb6733d" name="Changes" comment="fixed mess caused my webstorm hiding the .idea folder (seriously, why was this such a hard thin to find an answer for?!)">
-      <change afterPath="$PROJECT_DIR$/src/components/Main/main.module.scss" afterDir="false" />
+    <list default="true" id="f8b72b0a-65b1-42cf-8c1c-d46b9fb6733d" name="Changes" comment="added main component and board stylesheet">
+      <change afterPath="$PROJECT_DIR$/src/components/Figure/figure.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Figure/figure.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Board/board.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board/board.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688076015598</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added main component and board stylesheet">
+      <created>1688140051236</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688140051236</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +107,7 @@
     <MESSAGE value="trying to deal with webstorm refusing to show the .idea folder (2)" />
     <MESSAGE value="updated gitignore" />
     <MESSAGE value="fixed mess caused my webstorm hiding the .idea folder (seriously, why was this such a hard thin to find an answer for?!)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed mess caused my webstorm hiding the .idea folder (seriously, why was this such a hard thin to find an answer for?!)" />
+    <MESSAGE value="added main component and board stylesheet" />
+    <option name="LAST_COMMIT_MESSAGE" value="added main component and board stylesheet" />
   </component>
 </project>
