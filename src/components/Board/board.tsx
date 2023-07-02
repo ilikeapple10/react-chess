@@ -1,5 +1,5 @@
 import React, {MutableRefObject, useEffect, useRef, useState} from "react";
-import styles from "./Board.module.scss";
+import styles from "./board.module.scss";
 import {BoardLettersByNumber, Colors, FigureData, Figures} from "types";
 import Cell from "./cell";
 import Figure from "components/Figure/figure";
@@ -23,7 +23,7 @@ const Board: React.FC = () => {
     let [isKingInCheck, setIsKingInCheck] = useState<boolean>(false);
     let dangerousCells: MutableRefObject<{
         white: { [key: string]: boolean };
-        black: { [key: string]: boolean };
+        black: { [key: string]: boolean }
     }> = useRef({white: {}, black: {}});
 
     const sides = {
@@ -40,19 +40,19 @@ const Board: React.FC = () => {
     const cellsFigure: { [key: string]: FigureData | null } = {}
 
     const isAvailableCellForMove = (x: number, y: number): boolean => {
-        if (choseFigurePos && choseFigurePos.availableCells['${x}-${y}']) {
+        if (choseFigurePos && choseFigurePos.availableCells[`${x}-${y}`]) {
             return true;
         }
         return false;
     }
 
     const isCellHavingFigure = (x: number, y: number): boolean => {
-        return cellsFigure['${x}-${y}'] ? true : false;
+        return cellsFigure[`${x}-${y}`] ? true : false;
     }
 
     const moveOn = (figure: FigureData, x: number, y: number) => {
-        cellsFigure['${figure.x}-{figure.y}'] = null;
-        cellsFigure['${x}-{y}'] = figure;
+        cellsFigure[`${figure.x}-${figure.y}`] = null;
+        cellsFigure[`${x}-${y}`] = figure;
         dispatch(changeFigurePosition({figure, x, y}));
         setChoseFigurePos(null);
     }
@@ -62,7 +62,7 @@ const Board: React.FC = () => {
         if (!choseFigurePos.availableCells[`${x}-${y}`]) return;
 
         moveOn(choseFigurePos.figure, x, y);
-        //add AI delay here
+        nextAIMoveDelayed();
     }
 
     const initCells = (): JSX.Element[] => {
@@ -111,11 +111,12 @@ const Board: React.FC = () => {
     }
 
     const initFigures = (): JSX.Element[] => {
-        const figuresJSK: JSX.Element[] = [];
+        const figuresJSX: JSX.Element[] = [];
+
         for (let item in figures) {
-            if (!figures[item].id || figures[item].color) continue;
+            if (!figures[item].id || !figures[item].color) continue;
             cellsFigure[`${figures[item].x}-${figures[item].y}`] = figures[item];
-            figuresJSK.push(<Figure
+            figuresJSX.push(<Figure
                 figureClicked={figureClicked}
                 key={figures[item].id}
                 figure={figures[item]}
@@ -124,7 +125,7 @@ const Board: React.FC = () => {
             />);
         }
 
-        return figuresJSK;
+        return figuresJSX;
     }
 
     const resizeBoard = () => {
@@ -151,7 +152,7 @@ const Board: React.FC = () => {
     const figureClicked = (figure: FigureData) => {
         if (choseFigurePos && choseFigurePos.availableCells[`${figure.x}-${figure.y}`] && choseFigurePos.figure.color !== figure.color) {
             moveOrEat(choseFigurePos.figure, figure.x, figure.y);
-            //add AI delay here
+            nextAIMoveDelayed();
             return;
         }
 
@@ -420,14 +421,14 @@ const Board: React.FC = () => {
             checkKingDiagonal();
             checkEatableFiguresByKing();
 
-            const cellsForRemoving: { x: number, y: number }[] = [];
+            const cellsForRemoving:{x: number, y: number}[] = [];
             for (let i = 0; i < way.length; i++) {
                 if (dangerousCells.current[getOtherColor(figure.color)][`${way[i].x}-${way[i].y}`]) {
                     cellsForRemoving.push({x: way[i].x, y: way[i].y})
                 }
             }
             cellsForRemoving.forEach(elw => {
-                way = way.filter(el => !(el.y === elw.y && el.x === elw.x))
+                way = way.filter(el => !(el.y === elw.y && el.x === elw.x) )
             });
         }
 
@@ -513,7 +514,7 @@ const Board: React.FC = () => {
         const color = gameWon[0].toUpperCase() + gameWon.slice(1);
 
         return <div className={styles.gameWon}>
-            <h2 className={styles.gameWonTitle}>{color} won</h2>
+            <h2 className={styles.gameWonTitle}>{ color } won</h2>
             <Link to="/" className={styles.gameWonButton}>Main page</Link>
         </div>;
     }
@@ -556,7 +557,7 @@ const Board: React.FC = () => {
             {initFigures()}
         </ul>
 
-        {getGameWonJSX()}
+        { getGameWonJSX() }
     </div>
 }
 

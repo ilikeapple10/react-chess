@@ -4,26 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b72b0a-65b1-42cf-8c1c-d46b9fb6733d" name="Changes" comment="added Board functionality, updated stylesheet and cells">
-      <change afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/svgs/bishop-black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/svgs/bishop-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/svgs/king-black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/svgs/king-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/svgs/knight-black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/svgs/knight-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/svgs/pawn-black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/svgs/pawn-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/svgs/queen-black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/svgs/queen-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/svgs/rook-black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/svgs/rook-white.svg" afterDir="false" />
+    <list default="true" id="f8b72b0a-65b1-42cf-8c1c-d46b9fb6733d" name="Changes" comment="added chess piece icons, routing, and stylesheets for index">
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Board/board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board/board.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Board/cell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board/cell.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Board/initialPos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board/initialPos.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Figure/figure.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Figure/figure.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +30,7 @@
       <list>
         <option value="CSS File" />
         <option value="TypeScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -46,6 +42,19 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="01476f1c-77c3-4094-a44c-02f740284a6a" />
+        <option name="url" value="https://github.com/ilikeapple10/react-chess.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -55,24 +64,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/ethantai/WebstormProjects/react-chess",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "/Users/ethantai/WebstormProjects/react-chess/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ethantai/WebstormProjects/react-chess&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/ethantai/WebstormProjects/react-chess/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -84,7 +100,10 @@
       <workItem from="1688074538204" duration="415000" />
       <workItem from="1688074960644" duration="7000" />
       <workItem from="1688074968570" duration="349000" />
-      <workItem from="1688312311976" duration="3121000" />
+      <workItem from="1688312311976" duration="4265000" />
+      <workItem from="1688316721159" duration="36000" />
+      <workItem from="1688316853759" duration="209000" />
+      <workItem from="1688317815853" duration="521000" />
     </task>
     <task id="LOCAL-00001" summary="trying to fix the nightmare that is webstorm hiding directories">
       <created>1688074917374</created>
@@ -135,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688313321140</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added chess piece icons, routing, and stylesheets for index">
+      <created>1688315647206</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688315647206</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +175,7 @@
     <MESSAGE value="added main component and board stylesheet" />
     <MESSAGE value="added board and updated its stylesheet, made figure files" />
     <MESSAGE value="added Board functionality, updated stylesheet and cells" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Board functionality, updated stylesheet and cells" />
+    <MESSAGE value="added chess piece icons, routing, and stylesheets for index" />
+    <option name="LAST_COMMIT_MESSAGE" value="added chess piece icons, routing, and stylesheets for index" />
   </component>
 </project>

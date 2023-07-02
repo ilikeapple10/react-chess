@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Board.module.scss";
+import styles from "./board.module.scss";
 import {BoardNumbersByLetter, Colors} from "../../types";
 import classNames from "classnames";
 

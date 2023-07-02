@@ -7,6 +7,7 @@ import {useAppDispatch, useAppSelector} from "redux/hooks";
 import {Colors} from "types";
 import {useNavigate} from "react-router-dom";
 
+
 const Main: React.FC = () => {
     const navigate = useNavigate();
     const color = useAppSelector(selectColor);
@@ -21,9 +22,10 @@ const Main: React.FC = () => {
         dispatch(resetGame());
         navigate("/game");
     }
-    return <div className = {styles.wrapper}>
-        <div className = {styles.logo}></div>
-        <h2>Choose Side</h2>
+
+    return <div className={styles.wrapper}>
+        <div className={styles.logo}></div>
+        <h2>Choose side</h2>
         <form>
             <RadioButton value="White" handleChange={radioChanged} name="radio" isChecked={color === 'white'}/>
             <RadioButton value="Black" handleChange={radioChanged} name="radio" isChecked={color === 'black'}/>
